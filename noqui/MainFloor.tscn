@@ -1,25 +1,41 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2yc0x2j5vn7"]
+[gd_scene load_steps=12 format=3 uid="uid://d2yc0x2j5vn7"]
 
+[ext_resource type="Script" uid="uid://n0kyjbumf0gi" path="res://main_floor.gd" id="1_bfoay"]
 [ext_resource type="Texture2D" uid="uid://nktd4se5hc30" path="res://ofice.jpg" id="1_jxd5o"]
 [ext_resource type="Script" uid="uid://cq2q2fi2aoubb" path="res://player.gd" id="2_f0pd8"]
 [ext_resource type="Texture2D" uid="uid://c0gmxbwguf7fj" path="res://sm.jpg" id="2_ip52o"]
+[ext_resource type="Texture2D" uid="uid://b2ktnh870o8sd" path="res://despachaco.jpg" id="4_kv40m"]
+[ext_resource type="Texture2D" uid="uid://c6oqwp8gg0vsg" path="res://elevator.jpg" id="5_5rqwt"]
+[ext_resource type="Script" uid="uid://c46bayjehfawq" path="res://area_2d.gd" id="5_okiko"]
+[ext_resource type="Texture2D" uid="uid://gq1a7k6y5e32" path="res://icon.svg" id="7_bfoay"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kv40m"]
+normal = Vector2(0.0057802503, -0.9999833)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0pd8"]
 radius = 45.0
 height = 166.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kv40m"]
-normal = Vector2(0.0057802503, -0.9999833)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tppa1"]
+size = Vector2(225, 397)
 
 [node name="MainFloor" type="Node2D"]
+script = ExtResource("1_bfoay")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PlantaS" type="Sprite2D" parent="."]
 scale = Vector2(0.9199965, 0.88000095)
 texture = ExtResource("1_jxd5o")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="walls" type="StaticBody2D" parent="Camera2D"]
+position = Vector2(-1, 296)
+
+[node name="down" type="CollisionShape2D" parent="Camera2D/walls"]
+shape = SubResource("WorldBoundaryShape2D_kv40m")
+
 [node name="Player" type="CharacterBody2D" parent="."]
+z_index = 1
 scale = Vector2(1.7999983, 2.6)
 script = ExtResource("2_f0pd8")
 
@@ -30,15 +46,45 @@ texture = ExtResource("2_ip52o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_f0pd8")
 
-[node name="walls" type="StaticBody2D" parent="."]
-position = Vector2(-1, 296)
-
-[node name="down" type="CollisionShape2D" parent="walls"]
-shape = SubResource("WorldBoundaryShape2D_kv40m")
-
 [node name="walls2" type="StaticBody2D" parent="."]
 position = Vector2(551, -1)
 rotation = -1.5842758
 
 [node name="right" type="CollisionShape2D" parent="walls2"]
 shape = SubResource("WorldBoundaryShape2D_kv40m")
+
+[node name="walls3" type="StaticBody2D" parent="."]
+position = Vector2(-553, -0.9999995)
+rotation = -4.7224216
+
+[node name="right" type="CollisionShape2D" parent="walls3"]
+shape = SubResource("WorldBoundaryShape2D_kv40m")
+
+[node name="Despacho" type="Sprite2D" parent="."]
+modulate = Color(0.27, 0.27, 0.27, 1)
+position = Vector2(-2, -556)
+scale = Vector2(1.5109715, 1.2544777)
+texture = ExtResource("4_kv40m")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(376, 94)
+script = ExtResource("5_okiko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -3.5)
+shape = SubResource("RectangleShape2D_tppa1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, -1)
+scale = Vector2(0.51999635, 0.5200021)
+texture = ExtResource("5_5rqwt")
+
+[node name="info" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(91, -225.00002)
+scale = Vector2(-1.15141, 1.45798)
+texture = ExtResource("7_bfoay")
+
+[connection signal="elevator_up" from="Player" to="." method="_on_player_elevator_up"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
