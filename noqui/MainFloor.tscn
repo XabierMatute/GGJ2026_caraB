@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2yc0x2j5vn7"]
+
+[ext_resource type="Texture2D" uid="uid://nktd4se5hc30" path="res://ofice.jpg" id="1_jxd5o"]
+[ext_resource type="Script" uid="uid://cq2q2fi2aoubb" path="res://player.gd" id="2_f0pd8"]
+[ext_resource type="Texture2D" uid="uid://c0gmxbwguf7fj" path="res://sm.jpg" id="2_ip52o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0pd8"]
+radius = 45.0
+height = 166.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kv40m"]
+normal = Vector2(0.0057802503, -0.9999833)
+
+[node name="MainFloor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.9199965, 0.88000095)
+texture = ExtResource("1_jxd5o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+scale = Vector2(1.7999983, 2.6)
+script = ExtResource("2_f0pd8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(0.18969072, 0.21282052)
+texture = ExtResource("2_ip52o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_f0pd8")
+
+[node name="walls" type="StaticBody2D" parent="."]
+position = Vector2(-1, 296)
+
+[node name="down" type="CollisionShape2D" parent="walls"]
+shape = SubResource("WorldBoundaryShape2D_kv40m")
+
+[node name="walls2" type="StaticBody2D" parent="."]
+position = Vector2(551, -1)
+rotation = -1.5842758
+
+[node name="right" type="CollisionShape2D" parent="walls2"]
+shape = SubResource("WorldBoundaryShape2D_kv40m")
