@@ -1,11 +1,13 @@
-[gd_scene load_steps=43 format=3 uid="uid://cjb3twx1xonj6"]
+[gd_scene load_steps=53 format=3 uid="uid://cjb3twx1xonj6"]
 
 [ext_resource type="Texture2D" uid="uid://c0jscr227vgc3" path="res://placeholders/esqueleto2.png" id="1_6f5qh"]
 [ext_resource type="Texture2D" uid="uid://byclf3uapkkr4" path="res://placeholders/piso-1dch.png" id="1_6peaj"]
 [ext_resource type="Texture2D" uid="uid://e10la4ldax1a" path="res://placeholders/piso0lobby.png" id="2_d3wf5"]
+[ext_resource type="Script" uid="uid://cmv8tetcflwuq" path="res://escenas/piso+1_izq.gd" id="2_twkw8"]
 [ext_resource type="Script" uid="uid://bpcfqx4bamxbm" path="res://escenas/piso_1_dch.gd" id="2_wtghu"]
 [ext_resource type="Texture2D" uid="uid://bue3ib33hxcea" path="res://placeholders/piso-2izq.png" id="3_7uqg8"]
 [ext_resource type="Texture2D" uid="uid://dkwpvnctullh2" path="res://placeholders/piso-1izq.png" id="3_x5pb1"]
+[ext_resource type="Script" uid="uid://d2n5fgn8ysiym" path="res://escenas/piso+1_dch.gd" id="4_1xgdp"]
 [ext_resource type="Texture2D" uid="uid://bb4ab40h2jddv" path="res://placeholders/piso-2mid.png" id="4_jo1d5"]
 [ext_resource type="Script" uid="uid://cuhrqaw3uux5" path="res://escenas/piso_1_izq.gd" id="4_w48w7"]
 [ext_resource type="Script" uid="uid://cbmvcpkb15wal" path="res://escenas/piso_2_izq.gd" id="5_jo1d5"]
@@ -25,15 +27,24 @@
 [ext_resource type="Texture2D" uid="uid://dhkbnr412fwv8" path="res://placeholders/piso2izq.png" id="23_1xgdp"]
 [ext_resource type="Texture2D" uid="uid://nktsyi2ly7sn" path="res://placeholders/piso2mid.png" id="24_w6teq"]
 [ext_resource type="Texture2D" uid="uid://bwn6huchwhpoj" path="res://placeholders/piso2dch.png" id="25_blvmb"]
+[ext_resource type="Script" uid="uid://16xsbdiac58" path="res://escenas/piso+2_izq.gd" id="26_w6teq"]
+[ext_resource type="Script" uid="uid://j261k50rskt4" path="res://escenas/piso+2_mid.gd" id="28_sjbeo"]
+[ext_resource type="Script" uid="uid://c4q3jjwkacifh" path="res://escenas/piso+2_dch.gd" id="30_slkbj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qilyf"]
-size = Vector2(1046.792, 179.23828)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xgdp"]
+size = Vector2(445.35657, 286.7589)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6teq"]
+size = Vector2(466.8039, 316.0338)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6dum"]
 size = Vector2(1580.1357, 133)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qilyf"]
+size = Vector2(1046.792, 179.23828)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo312"]
-size = Vector2(646.5043, 212.97375)
+size = Vector2(647.07324, 212.97375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qf680"]
 size = Vector2(58.125366, 115.740555)
@@ -117,7 +128,55 @@ size = Vector2(0.5753764, 4.6073027)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xe4al"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blvmb"]
+size = Vector2(137.6434, 168.93439)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80go2"]
+size = Vector2(519.56525, 167.91382)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd4nh"]
+size = Vector2(187.44559, 167.34694)
+
 [node name="Edificio" type="Node2D"]
+
+[node name="Planta+1" type="Node2D" parent="."]
+
+[node name="Piso1Izq" type="Sprite2D" parent="Planta+1"]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(-4527, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("21_f6721")
+script = ExtResource("2_twkw8")
+
+[node name="Area2D" type="Area2D" parent="Planta+1/Piso1Izq"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Piso1Izq/Area2D"]
+position = Vector2(14.999512, -17.857183)
+scale = Vector2(17.228569, 7.2285705)
+shape = SubResource("RectangleShape2D_1xgdp")
+
+[node name="Piso1Dch" type="Sprite2D" parent="Planta+1"]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(2180.0002, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("22_twkw8")
+script = ExtResource("4_1xgdp")
+
+[node name="Area2D" type="Area2D" parent="Planta+1/Piso1Dch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Piso1Dch/Area2D"]
+position = Vector2(63.5708, 12.857142)
+scale = Vector2(24.314278, 6.7714267)
+shape = SubResource("RectangleShape2D_w6teq")
+
+[node name="Suelo" type="StaticBody2D" parent="Planta+1"]
+position = Vector2(0, 814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Suelo"]
+position = Vector2(60.50006, 17.5)
+scale = Vector2(10.319999, 1)
+shape = SubResource("RectangleShape2D_q6dum")
+debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
 
 [node name="Esqueleto" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -239,8 +298,8 @@ scale = Vector2(13.331655, 0.7479819)
 shape = SubResource("RectangleShape2D_8hebl")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-z_index = 1
-position = Vector2(-4049, 7223)
+z_index = 10
+position = Vector2(-6454, -8805)
 script = ExtResource("6_qbixs")
 
 [node name="Sprite2D(placeholder)" type="Sprite2D" parent="Player"]
@@ -296,46 +355,6 @@ rotation = -1.5707964
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WWalls/RightWall"]
 shape = SubResource("WorldBoundaryShape2D_xe4al")
 
-[node name="Planta+1" type="Node2D" parent="."]
-
-[node name="Piso1Izq" type="Sprite2D" parent="Planta+1"]
-modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
-position = Vector2(-4527, 0)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("21_f6721")
-script = ExtResource("4_w48w7")
-
-[node name="Area2D" type="Area2D" parent="Planta+1/Piso1Izq"]
-position = Vector2(-105.71428, 7.1428566)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Piso1Izq/Area2D"]
-position = Vector2(79.64258, -8.571426)
-scale = Vector2(129.70729, 18.032938)
-shape = SubResource("RectangleShape2D_qf680")
-
-[node name="Piso1Dch" type="Sprite2D" parent="Planta+1"]
-modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
-position = Vector2(2180.0002, 0)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("22_twkw8")
-script = ExtResource("2_wtghu")
-
-[node name="Area2D" type="Area2D" parent="Planta+1/Piso1Dch"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Piso1Dch/Area2D"]
-position = Vector2(48.571533, -17.142853)
-scale = Vector2(17.571424, 9.799997)
-shape = SubResource("RectangleShape2D_lo312")
-
-[node name="Suelo" type="StaticBody2D" parent="Planta+1"]
-position = Vector2(0, 814)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Suelo"]
-position = Vector2(60.50006, 17.5)
-scale = Vector2(10.319999, 1)
-shape = SubResource("RectangleShape2D_q6dum")
-debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
-
 [node name="Planta+2" type="Node2D" parent="."]
 position = Vector2(0, -7400)
 
@@ -343,17 +362,54 @@ position = Vector2(0, -7400)
 position = Vector2(-5870, 0)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("23_1xgdp")
+script = ExtResource("26_w6teq")
+
+[node name="Area2D" type="Area2D" parent="Planta+2/Piso2Izq"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+2/Piso2Izq/Area2D"]
+position = Vector2(-24.285156, -12.857422)
+scale = Vector2(27.400002, 12.599994)
+shape = SubResource("RectangleShape2D_blvmb")
 
 [node name="Piso2Mid" type="Sprite2D" parent="Planta+2"]
 position = Vector2(-465.0039, 0)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("24_w6teq")
+script = ExtResource("28_sjbeo")
+
+[node name="Area2D" type="Area2D" parent="Planta+2/Piso2Mid"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+2/Piso2Mid/Area2D"]
+position = Vector2(22.147583, -3.571289)
+scale = Vector2(21.685707, 12.599995)
+shape = SubResource("RectangleShape2D_80go2")
 
 [node name="Piso2Dch" type="Sprite2D" parent="Planta+2"]
 position = Vector2(4926, 0)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("25_blvmb")
+script = ExtResource("30_slkbj")
 
+[node name="Area2D" type="Area2D" parent="Planta+2/Piso2Dch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+2/Piso2Dch/Area2D"]
+position = Vector2(49.285645, -10)
+scale = Vector2(19.68571, 12.599995)
+shape = SubResource("RectangleShape2D_hd4nh")
+
+[node name="Suelo" type="StaticBody2D" parent="Planta+2"]
+position = Vector2(0, 814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+2/Suelo"]
+position = Vector2(60.50006, 17.5)
+scale = Vector2(10.319999, 1)
+shape = SubResource("RectangleShape2D_q6dum")
+debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
+
+[connection signal="body_entered" from="Planta+1/Piso1Izq/Area2D" to="Planta+1/Piso1Izq" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+1/Piso1Izq/Area2D" to="Planta+1/Piso1Izq" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta0/Piso0Lobby/Area2D" to="Planta0/Piso0Lobby" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta0/Piso0Lobby/Area2D" to="Planta0/Piso0Lobby" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-1/Piso-1Izq/Area2D" to="Planta-1/Piso-1Izq" method="_on_area_2d_body_entered"]
@@ -366,7 +422,9 @@ texture = ExtResource("25_blvmb")
 [connection signal="body_exited" from="Planta-2/Piso-2Mid/Area2D" to="Planta-2/Piso-2Mid" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-2/Piso-2Dch/Area2D" to="Planta-2/Piso-2Dch" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-2/Piso-2Dch/Area2D" to="Planta-2/Piso-2Dch" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Planta+1/Piso1Izq/Area2D" to="Planta+1/Piso1Izq" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Planta+1/Piso1Izq/Area2D" to="Planta+1/Piso1Izq" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta+2/Piso2Izq/Area2D" to="Planta+2/Piso2Izq" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+2/Piso2Izq/Area2D" to="Planta+2/Piso2Izq" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta+2/Piso2Mid/Area2D" to="Planta+2/Piso2Mid" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+2/Piso2Mid/Area2D" to="Planta+2/Piso2Mid" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta+2/Piso2Dch/Area2D" to="Planta+2/Piso2Dch" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+2/Piso2Dch/Area2D" to="Planta+2/Piso2Dch" method="_on_area_2d_body_exited"]

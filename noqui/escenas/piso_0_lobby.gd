@@ -12,17 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		var tween: Tween = create_tween()
-		tween.tween_property($"../../Camera2D", "position", global_position, 1)
-		tween.parallel().tween_property($"../../Camera2D", "zoom", Vector2.ONE / 5, 1)
-		tween.parallel().tween_property(self, "modulate", Color.WHITE, 1)
-
-
+	pass # Replace with function body.
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
-		var tween: Tween = create_tween()
-		tween.parallel().tween_property(self, "modulate", Color("#616161"), 1)
-		#tween.parallel().tween_property($"../../Camera2D", "zoom", Vector2.ONE / 2, 1)
+	pass # Replace with function body.
