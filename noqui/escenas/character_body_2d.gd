@@ -23,7 +23,7 @@ func _ready() -> void:
 func change_floor_to(floor :int):
 	current_floor = floor
 	position.y = plantas[current_floor].position.y
-	
+
 
 
 func _physics_process(delta: float) -> void:

@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsuovvrfcjf2g"]
+
+[ext_resource type="Texture2D" uid="uid://bvyjgjynbli7t" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Merida_movimiento_drch_1.png" id="1_f428k"]
+[ext_resource type="Script" uid="uid://ii30r2j2me17" path="res://escenas/Personajes/character.gd" id="1_pfauh"]
+[ext_resource type="Texture2D" uid="uid://deivinrayusol" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Merida_movimiento_drch_2.png" id="2_pfauh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a4tr"]
+atlas = ExtResource("1_f428k")
+region = Rect2(0, 0, 996, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2dyu"]
+atlas = ExtResource("2_pfauh")
+region = Rect2(0, 0, 996, 2268)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6u175"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2a4tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2dyu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Merida" type="Node2D"]
+script = ExtResource("1_pfauh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6u175")
+autoplay = "default"
+frame_progress = 0.90050864

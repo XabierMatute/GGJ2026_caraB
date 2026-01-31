@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmwvialipta3o"]
+
+[ext_resource type="Texture2D" uid="uid://cbg4pdsf4jkvu" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Jason_movimiento_izq_1.png" id="1_2f31g"]
+[ext_resource type="Script" uid="uid://ii30r2j2me17" path="res://escenas/Personajes/character.gd" id="1_07wtj"]
+[ext_resource type="Texture2D" uid="uid://duojgcuer7u16" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Jason_movimiento_izq_2.png" id="2_07wtj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rjt7"]
+atlas = ExtResource("1_2f31g")
+region = Rect2(2500, 0, 1000, 2265)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jy5kn"]
+atlas = ExtResource("2_07wtj")
+region = Rect2(2500, 0, 1000, 2265)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gv82t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rjt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jy5kn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Jason" type="Node2D"]
+script = ExtResource("1_07wtj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gv82t")
+autoplay = "default"
+frame_progress = 0.49804112

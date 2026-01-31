@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm1m4ntewyyy8"]
+
+[ext_resource type="Texture2D" uid="uid://0jy85x8c6s5a" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Jimmi/Jimmi_movimiento_izq_1.png" id="1_r0tcx"]
+[ext_resource type="Script" uid="uid://ii30r2j2me17" path="res://escenas/Personajes/character.gd" id="1_sskhs"]
+[ext_resource type="Texture2D" uid="uid://dnmnc0ithfu48" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Jimmi/Jimmi_movimiento_izq_2.png" id="2_sskhs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8tr4"]
+atlas = ExtResource("1_r0tcx")
+region = Rect2(0, 0, 1000, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x588"]
+atlas = ExtResource("2_sskhs")
+region = Rect2(0, 0, 1000, 2268)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mxxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8tr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x588")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Jimmi" type="Node2D"]
+script = ExtResource("1_sskhs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4mxxy")
+autoplay = "default"
+frame_progress = 0.71810347

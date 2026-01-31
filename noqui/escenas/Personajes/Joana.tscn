@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://t6u8o1lux6jk"]
+
+[ext_resource type="Script" uid="uid://ii30r2j2me17" path="res://escenas/Personajes/character.gd" id="1_rhu2k"]
+[ext_resource type="Texture2D" uid="uid://dfkitfushy5x" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Joana_movimiento_izq_1.png" id="1_u10lw"]
+[ext_resource type="Texture2D" uid="uid://jmj0lwxe2f25" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Joana_movimiento_izq_2.png" id="2_rhu2k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npjhn"]
+atlas = ExtResource("1_u10lw")
+region = Rect2(1500, 0, 1000, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wgd6"]
+atlas = ExtResource("2_rhu2k")
+region = Rect2(1500, 0, 1000, 2268)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qke12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npjhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wgd6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Joana" type="Node2D"]
+script = ExtResource("1_rhu2k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qke12")
+autoplay = "default"
+frame_progress = 0.060428903
