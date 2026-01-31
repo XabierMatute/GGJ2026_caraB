@@ -1,4 +1,4 @@
-extends Area2D
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -8,14 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-
-func _on_body_entered(body: Node2D) -> void:
-	$info.visible = true
-	#$Button.visible = true
-	#$Button2.visible = true
-
-
-func _on_body_exited(body: Node2D) -> void:
-	$info.visible = false
+	$Label.text = str($Timer.time_left)
+	#$Sprite2D.global_rotation = 
+	$Sprite2D.global_rotation = $Timer.time_left / 10 * (PI) * - 1 - PI /2

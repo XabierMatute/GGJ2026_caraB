@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://wumqnstuuudn"]
+[gd_scene load_steps=4 format=3 uid="uid://wumqnstuuudn"]
 
 [ext_resource type="Texture2D" uid="uid://d2i00skhs7iu6" path="res://diegotolosa_torre.png" id="1_e37n3"]
 [ext_resource type="Texture2D" uid="uid://ccjwwxw8qxlwe" path="res://trans.png" id="2_v8dyh"]
+[ext_resource type="Texture2D" uid="uid://gq1a7k6y5e32" path="res://icon.svg" id="3_pe7t1"]
 
 [node name="Building" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-1265, 30)
+repeat_size = Vector2(486, 0)
+autoscroll = Vector2(8, 0)
+repeat_times = 42
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("3_pe7t1")
 
 [node name="BuildingSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_e37n3")
@@ -16,3 +26,16 @@ modulate = Color(0.23, 0.23, 0.23, 0)
 position = Vector2(-229, -201)
 scale = Vector2(0.120000854, 1)
 texture = ExtResource("2_v8dyh")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport"]
+position = Vector2(42, 0)
+limit_left = -443
+limit_top = -709
+limit_right = 709
+limit_bottom = -61
+
+[node name="CanvasModulate" type="CanvasModulate" parent="SubViewport"]
+position = Vector2(-7, -6)
+color = Color(0, 0, 0, 1)

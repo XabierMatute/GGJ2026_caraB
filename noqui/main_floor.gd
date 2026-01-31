@@ -21,6 +21,7 @@ func _on_player_elevator_up() -> void:
 	tween.parallel().tween_property($Despacho, "modulate", Color.WHITE, 1)
 	#await tween.finished
 	tween.tween_property($Player/Sprite2D, "modulate:a", 1, 0.5)
+	tween.tween_property($Camera2D, "zoom", $Camera2D.zoom / 2, 0.5)
 	
 	#$Player.position.y = $Despacho.position.y - 1000
 	

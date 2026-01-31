@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2yc0x2j5vn7"]
+[gd_scene load_steps=13 format=3 uid="uid://d2yc0x2j5vn7"]
 
 [ext_resource type="Script" uid="uid://n0kyjbumf0gi" path="res://main_floor.gd" id="1_bfoay"]
 [ext_resource type="Texture2D" uid="uid://nktd4se5hc30" path="res://ofice.jpg" id="1_jxd5o"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c6oqwp8gg0vsg" path="res://elevator.jpg" id="5_5rqwt"]
 [ext_resource type="Script" uid="uid://c46bayjehfawq" path="res://area_2d.gd" id="5_okiko"]
 [ext_resource type="Texture2D" uid="uid://gq1a7k6y5e32" path="res://icon.svg" id="7_bfoay"]
+[ext_resource type="Script" uid="uid://dk8yftns1dfua" path="res://control.gd" id="9_f3i1g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kv40m"]
 normal = Vector2(0.0057802503, -0.9999833)
@@ -86,6 +87,48 @@ visible = false
 position = Vector2(91, -225.00002)
 scale = Vector2(-1.15141, 1.45798)
 texture = ExtResource("7_bfoay")
+
+[node name="Button" type="Button" parent="Area2D"]
+visible = false
+offset_left = -837.0
+offset_right = 8.0
+offset_bottom = 51.0
+text = "Opcion 1"
+
+[node name="Button2" type="Button" parent="Area2D"]
+visible = false
+offset_left = -823.0
+offset_top = 105.0
+offset_right = 22.0
+offset_bottom = 156.0
+text = "Opcion 2
+"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -443.0
+offset_top = -175.0
+offset_right = -403.0
+offset_bottom = -135.0
+script = ExtResource("9_f3i1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+z_index = 3
+position = Vector2(-55.999996, -25.000004)
+rotation = -1.5694132
+scale = Vector2(0.31999987, 1)
+texture = ExtResource("7_bfoay")
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="elevator_up" from="Player" to="." method="_on_player_elevator_up"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
