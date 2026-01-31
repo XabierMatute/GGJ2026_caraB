@@ -1,38 +1,41 @@
-[gd_scene load_steps=70 format=3 uid="uid://cjb3twx1xonj6"]
+[gd_scene load_steps=75 format=3 uid="uid://cjb3twx1xonj6"]
 
+[ext_resource type="Texture2D" uid="uid://ch17t85uq2bcw" path="res://fondos/Piso2_descansoizq.png" id="1_3vdql"]
 [ext_resource type="Texture2D" uid="uid://c0jscr227vgc3" path="res://placeholders/esqueleto2.png" id="1_6f5qh"]
 [ext_resource type="Texture2D" uid="uid://byclf3uapkkr4" path="res://placeholders/piso-1dch.png" id="1_6peaj"]
-[ext_resource type="Texture2D" uid="uid://e10la4ldax1a" path="res://placeholders/piso0lobby.png" id="2_d3wf5"]
 [ext_resource type="Script" uid="uid://cmv8tetcflwuq" path="res://escenas/piso+1_izq.gd" id="2_twkw8"]
 [ext_resource type="Script" uid="uid://bpcfqx4bamxbm" path="res://escenas/piso_1_dch.gd" id="2_wtghu"]
-[ext_resource type="Texture2D" uid="uid://bue3ib33hxcea" path="res://placeholders/piso-2izq.png" id="3_7uqg8"]
 [ext_resource type="Texture2D" uid="uid://dkwpvnctullh2" path="res://placeholders/piso-1izq.png" id="3_x5pb1"]
 [ext_resource type="Script" uid="uid://d2n5fgn8ysiym" path="res://escenas/piso+1_dch.gd" id="4_1xgdp"]
 [ext_resource type="Texture2D" uid="uid://bb4ab40h2jddv" path="res://placeholders/piso-2mid.png" id="4_jo1d5"]
 [ext_resource type="Script" uid="uid://cuhrqaw3uux5" path="res://escenas/piso_1_izq.gd" id="4_w48w7"]
+[ext_resource type="Texture2D" uid="uid://epxj3wke0xw8" path="res://fondos/Piso2_almacendcha.png" id="5_c5k45"]
 [ext_resource type="Script" uid="uid://cbmvcpkb15wal" path="res://escenas/piso_2_izq.gd" id="5_jo1d5"]
-[ext_resource type="Texture2D" uid="uid://ej75hfcadc3o" path="res://placeholders/piso-2dch.png" id="5_xe4al"]
 [ext_resource type="Script" uid="uid://cnbdtabyx7wlc" path="res://escenas/character_body_2d.gd" id="6_qbixs"]
 [ext_resource type="Texture2D" uid="uid://c0gmxbwguf7fj" path="res://sm.jpg" id="7_8hci1"]
+[ext_resource type="Texture2D" uid="uid://dslc1em6nyb78" path="res://fondos/Piso1_cubiculosizq.png" id="7_pxh82"]
 [ext_resource type="Script" uid="uid://cyvupjtyeasf6" path="res://escenas/piso_2_mid.gd" id="7_xe4al"]
 [ext_resource type="Script" uid="uid://cqsjgwhrgs1mv" path="res://escenas/piso_2_dch.gd" id="9_xe4al"]
+[ext_resource type="Texture2D" uid="uid://wwtol4tu8l53" path="res://fondos/Piso0_lobby.png" id="11_3vdql"]
 [ext_resource type="Texture2D" uid="uid://gq1a7k6y5e32" path="res://icon.svg" id="12_qbixs"]
+[ext_resource type="PackedScene" uid="uid://btek8irvtcr4v" path="res://efectos/Sparks2D.tscn" id="13_c5k45"]
 [ext_resource type="Texture2D" uid="uid://bcvl1nll8tqtm" path="res://animation/timi drch abierto.png" id="15_x5pb1"]
 [ext_resource type="Texture2D" uid="uid://dht3fqy72cowh" path="res://animation/timi drch cerrado.png" id="16_w48w7"]
+[ext_resource type="Texture2D" uid="uid://bqdt8wxs16cro" path="res://fondos/Piso-2_almacenizq.png" id="17_gcye5"]
 [ext_resource type="Texture2D" uid="uid://bapa5lfrbuova" path="res://animation/timi izq cerrado.png" id="18_lo312"]
 [ext_resource type="Script" uid="uid://vmsxu34a3kog" path="res://escenas/piso_0_lobby.gd" id="18_w48w7"]
 [ext_resource type="Texture2D" uid="uid://dmr5vidp46281" path="res://animation/timi izq abierto.png" id="19_q6dum"]
-[ext_resource type="Texture2D" uid="uid://cud7cqkryxinb" path="res://placeholders/piso1izq.png" id="21_f6721"]
+[ext_resource type="Texture2D" uid="uid://dsrp4jyhuace" path="res://fondos/Piso-2_descansodcha.png" id="21_hoa52"]
 [ext_resource type="Texture2D" uid="uid://p1aaeh8yboj" path="res://placeholders/piso1dch.png" id="22_twkw8"]
-[ext_resource type="Texture2D" uid="uid://dhkbnr412fwv8" path="res://placeholders/piso2izq.png" id="23_1xgdp"]
 [ext_resource type="Texture2D" uid="uid://nktsyi2ly7sn" path="res://placeholders/piso2mid.png" id="24_w6teq"]
-[ext_resource type="Texture2D" uid="uid://bwn6huchwhpoj" path="res://placeholders/piso2dch.png" id="25_blvmb"]
 [ext_resource type="Texture2D" uid="uid://xcrmtlq6p22g" path="res://animation/TIMI/TIMI - prota/mascara -1/timi izq quieto 1 M-1.png" id="26_8joij"]
 [ext_resource type="Script" uid="uid://16xsbdiac58" path="res://escenas/piso+2_izq.gd" id="26_w6teq"]
 [ext_resource type="Texture2D" uid="uid://c04cxpcedibtt" path="res://animation/TIMI/TIMI - prota/mascara -1/timi izq quieto 2 M-1.png" id="27_cjs7h"]
 [ext_resource type="Texture2D" uid="uid://bpyi40dbfxbqp" path="res://animation/TIMI/TIMI - prota/mascara -1/timi drch quieto 1 M-1.png" id="28_3vdql"]
 [ext_resource type="Script" uid="uid://j261k50rskt4" path="res://escenas/piso+2_mid.gd" id="28_sjbeo"]
 [ext_resource type="Texture2D" uid="uid://cicvkuqfu44tf" path="res://animation/TIMI/TIMI - prota/mascara -1/timi drch quieto 2 M-1.png" id="29_c5k45"]
+[ext_resource type="Texture2D" uid="uid://cq88fb7ae5ceg" path="res://animation/TIMI/TIMI - prota/mascara -2/timi izq quieto 1 M-2.png" id="29_cjs7h"]
+[ext_resource type="Texture2D" uid="uid://cb2cpjpneuxqv" path="res://animation/TIMI/TIMI - prota/mascara -2/timi izq quieto 2 M-2.png" id="30_3vdql"]
 [ext_resource type="Texture2D" uid="uid://0bb2josuafgu" path="res://animation/TIMI/TIMI - prota/mascara -1/timi izq mover 1 M-1.png" id="30_pxh82"]
 [ext_resource type="Script" uid="uid://c4q3jjwkacifh" path="res://escenas/piso+2_dch.gd" id="30_slkbj"]
 [ext_resource type="Texture2D" uid="uid://rynw2v034xbg" path="res://animation/TIMI/TIMI - prota/mascara -1/timi izq mover 2 M-1.png" id="31_gcye5"]
@@ -59,7 +62,7 @@ size = Vector2(445.35657, 286.7589)
 size = Vector2(466.8039, 316.0338)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qilyf"]
-size = Vector2(1046.792, 179.23828)
+size = Vector2(520.14886, 89.12776)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo312"]
 size = Vector2(647.07324, 212.97375)
@@ -95,6 +98,14 @@ region = Rect2(1992, 0, 996, 2268)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbhdp"]
 atlas = ExtResource("27_cjs7h")
+region = Rect2(1992, 0, 996, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxh82"]
+atlas = ExtResource("29_cjs7h")
+region = Rect2(1992, 0, 996, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcye5"]
+atlas = ExtResource("30_3vdql")
 region = Rect2(1992, 0, 996, 2268)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4umw"]
@@ -147,7 +158,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_qbhdp")
 }],
 "loop": true,
-"name": &"M1_idle_left",
+"name": &"M-1_idle_left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"M-1_idle_left_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxh82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcye5")
+}],
+"loop": true,
+"name": &"M-2_idle_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -251,7 +278,7 @@ position = Vector2(0, -7400)
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(-5870, 0)
 scale = Vector2(0.70134383, 0.7)
-texture = ExtResource("23_1xgdp")
+texture = ExtResource("1_3vdql")
 script = ExtResource("26_w6teq")
 
 [node name="Area2D" type="Area2D" parent="Planta+2/Piso2Izq"]
@@ -279,7 +306,7 @@ shape = SubResource("RectangleShape2D_80go2")
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(4926, 0)
 scale = Vector2(0.70134383, 0.7)
-texture = ExtResource("25_blvmb")
+texture = ExtResource("5_c5k45")
 script = ExtResource("30_slkbj")
 
 [node name="Area2D" type="Area2D" parent="Planta+2/Piso2Dch"]
@@ -304,7 +331,7 @@ debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(-4527, 0)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("21_f6721")
+texture = ExtResource("7_pxh82")
 script = ExtResource("2_twkw8")
 
 [node name="Area2D" type="Area2D" parent="Planta+1/Piso1Izq"]
@@ -342,21 +369,56 @@ position = Vector2(0, 5402)
 
 [node name="Piso0Lobby" type="Sprite2D" parent="Planta0"]
 position = Vector2(-486.99997, 0)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_d3wf5")
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("11_3vdql")
 script = ExtResource("18_w48w7")
 
 [node name="Area2D" type="Area2D" parent="Planta0/Piso0Lobby"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planta0/Piso0Lobby/Area2D"]
-position = Vector2(8.570984, 2.1428566)
+position = Vector2(-20.35736, -4.6433105)
 scale = Vector2(18.257135, 11.6285715)
 shape = SubResource("RectangleShape2D_qilyf")
+
+[node name="Sparks2d" parent="Planta0/Piso0Lobby" instance=ExtResource("13_c5k45")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-1621.4285, 214.99998)
+scale = Vector2(9.4, 12.086)
 
 [node name="Suelo" type="StaticBody2D" parent="Planta0"]
 position = Vector2(0, 814)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planta0/Suelo"]
+position = Vector2(60.50006, 17.5)
+scale = Vector2(10.319999, 1)
+shape = SubResource("RectangleShape2D_q6dum")
+debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
+
+[node name="Planta1" type="Node2D" parent="."]
+position = Vector2(-960, -2417)
+
+[node name="Piso0Lobby" type="Sprite2D" parent="Planta1"]
+position = Vector2(-486.99997, 0)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("11_3vdql")
+script = ExtResource("18_w48w7")
+
+[node name="Area2D" type="Area2D" parent="Planta1/Piso0Lobby"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta1/Piso0Lobby/Area2D"]
+position = Vector2(-20.35736, -4.6433105)
+scale = Vector2(18.257135, 11.6285715)
+shape = SubResource("RectangleShape2D_qilyf")
+
+[node name="Sparks2d" parent="Planta1/Piso0Lobby" instance=ExtResource("13_c5k45")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-1621.4285, 214.99998)
+scale = Vector2(9.4, 12.086)
+
+[node name="Suelo" type="StaticBody2D" parent="Planta1"]
+position = Vector2(0, 814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta1/Suelo"]
 position = Vector2(60.50006, 17.5)
 scale = Vector2(10.319999, 1)
 shape = SubResource("RectangleShape2D_q6dum")
@@ -410,7 +472,7 @@ metadata/_edit_lock_ = true
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(-5859, 0)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_7uqg8")
+texture = ExtResource("17_gcye5")
 script = ExtResource("5_jo1d5")
 metadata/_edit_lock_ = true
 
@@ -440,7 +502,7 @@ shape = SubResource("RectangleShape2D_8hci1")
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(4945, 0)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("5_xe4al")
+texture = ExtResource("21_hoa52")
 script = ExtResource("9_xe4al")
 metadata/_edit_lock_ = true
 
@@ -518,12 +580,11 @@ position = Vector2(-27, -11)
 shape = SubResource("CapsuleShape2D_8hebl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(-1.9073486e-06, -81.000015)
+position = Vector2(-1, -81)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_q6dum")
-animation = &"M1_idle_left"
+animation = &"M-1_idle_left"
 autoplay = "default"
-frame_progress = 0.21383075
 
 [node name="Button" type="Button" parent="Player"]
 offset_left = 19.0
@@ -552,6 +613,8 @@ text = "Down"
 [connection signal="body_exited" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta0/Piso0Lobby/Area2D" to="Planta0/Piso0Lobby" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta0/Piso0Lobby/Area2D" to="Planta0/Piso0Lobby" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta1/Piso0Lobby/Area2D" to="Planta1/Piso0Lobby" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta1/Piso0Lobby/Area2D" to="Planta1/Piso0Lobby" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-1/Piso-1Izq/Area2D" to="Planta-1/Piso-1Izq" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-1/Piso-1Izq/Area2D" to="Planta-1/Piso-1Izq" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-1/Piso-1Dch/Area2D" to="Planta-1/Piso-1Dch" method="_on_area_2d_body_entered"]
