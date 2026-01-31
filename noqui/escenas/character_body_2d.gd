@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0 * 3
+const SPEED = 300.0 * 3 * 5
 const JUMP_VELOCITY = -400.0
 
 var current_floor = 0

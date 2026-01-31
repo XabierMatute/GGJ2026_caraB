@@ -15,7 +15,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		var tween: Tween = create_tween()
 		tween.tween_property($"../../Camera2D", "position", global_position, 1)
-		#tween.parallel().tween_property($"../../Camera2D", "zoom", Vector2.ONE / 3, 1)
+		tween.parallel().tween_property($"../../Camera2D", "zoom", Vector2.ONE / 2, 1)
 		tween.parallel().tween_property(self, "modulate", Color.WHITE, 1)
 
 

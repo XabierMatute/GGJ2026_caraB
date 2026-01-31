@@ -460,7 +460,7 @@ metadata/_edit_lock_ = true
 zoom = Vector2(0.1, 0.1)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(-3651, 9911)
+position = Vector2(-6942, 9901)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 scale = Vector2(191.17918, 26.4797)
@@ -523,7 +523,7 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_q6dum")
 animation = &"M1_idle_left"
 autoplay = "default"
-frame_progress = 0.70308006
+frame_progress = 0.21383075
 
 [node name="Button" type="Button" parent="Player"]
 offset_left = 19.0
