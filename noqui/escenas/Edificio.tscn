@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c0gmxbwguf7fj" path="res://sm.jpg" id="7_8hci1"]
 [ext_resource type="Script" uid="uid://cyvupjtyeasf6" path="res://escenas/piso_2_mid.gd" id="7_xe4al"]
 [ext_resource type="Script" uid="uid://cqsjgwhrgs1mv" path="res://escenas/piso_2_dch.gd" id="9_xe4al"]
+[ext_resource type="PackedScene" uid="uid://dpxjkr7q2rfvh" path="res://efectos/polvo_particles_2d.tscn" id="12_qbixs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbixs"]
 size = Vector2(3481.4287, 20)
@@ -119,6 +120,11 @@ rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=818400774]
 shape = SubResource("WorldBoundaryShape2D_7uqg8")
+
+[node name="CPUParticles2D" parent="." unique_id=1457626441 instance=ExtResource("12_qbixs")]
+position = Vector2(-5946, 9257)
+emission_shape = 3
+emission_rect_extents = Vector2(1200, 600)
 
 [connection signal="body_entered" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_exited"]

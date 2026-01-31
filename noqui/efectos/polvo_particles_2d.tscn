@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dqkyp31d5uf4a" path="res://efectos/polvo.png" id="1_cxfw2"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cxfw2"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
 [sub_resource type="Gradient" id="Gradient_1vvro"]
 offsets = PackedFloat32Array(0, 0.48447204, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.55776393, 0, 0, 0, 0)
@@ -11,11 +17,12 @@ _data = [Vector2(0.041518386, 0.00013685226), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0
 point_count = 2
 
 [node name="CPUParticles2D" type="CPUParticles2D" unique_id=1457626441]
-amount = 100
+material = SubResource("CanvasItemMaterial_cxfw2")
+amount = 50
 texture = ExtResource("1_cxfw2")
 lifetime = 7.22
 speed_scale = 1.44
-emission_shape = 2
+emission_shape = 1
 emission_sphere_radius = 128.0
 direction = Vector2(1, 5.215)
 spread = 180.0
