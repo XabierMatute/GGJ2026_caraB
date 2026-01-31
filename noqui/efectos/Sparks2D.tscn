@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://btek8irvtcr4v"]
+
+[ext_resource type="Texture2D" uid="uid://drm3h8s4fln3m" path="res://efectos/spark.png" id="1_u7s6g"]
+[ext_resource type="Texture2D" uid="uid://cu6mgshq4vimp" path="res://efectos/Humo.png" id="2_x20bc"]
+
+[sub_resource type="Gradient" id="Gradient_7hr0w"]
+offsets = PackedFloat32Array(0.58389264, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x6y2n"]
+gradient = SubResource("Gradient_7hr0w")
+
+[sub_resource type="Curve" id="Curve_lk1il"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5j7jg"]
+curve = SubResource("Curve_lk1il")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_x6y2n"]
+lifetime_randomness = 0.13
+particle_flag_disable_z = true
+angle_min = -91.399994
+angle_max = 98.80001
+inherit_velocity_ratio = 0.005
+velocity_pivot = Vector3(10, 10, 10)
+spread = 180.0
+initial_velocity_min = 198.56999
+initial_velocity_max = 198.56999
+gravity = Vector3(0, 500, 0)
+scale_min = 0.099999994
+scale_max = 0.099999994
+scale_curve = SubResource("CurveTexture_5j7jg")
+color_ramp = SubResource("GradientTexture1D_x6y2n")
+
+[sub_resource type="Gradient" id="Gradient_rwmhn"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v0me2"]
+gradient = SubResource("Gradient_rwmhn")
+
+[sub_resource type="Curve" id="Curve_he53u"]
+_data = [Vector2(0, 0.72912675), 0.0, 0.0, 0, 0, Vector2(0.99744576, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tnixf"]
+curve = SubResource("Curve_he53u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_46ci4"]
+lifetime_randomness = 0.05
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 38.49
+initial_velocity_min = 312.1
+initial_velocity_max = 313.0
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_tnixf")
+color = Color(1, 1, 1, 0.050980393)
+color_ramp = SubResource("GradientTexture1D_v0me2")
+turbulence_noise_strength = 0.0
+turbulence_noise_scale = 12.98
+
+[node name="Sparks2d" type="Node2D" unique_id=818307494]
+
+[node name="spark" type="GPUParticles2D" parent="." unique_id=707735368]
+amount = 10
+texture = ExtResource("1_u7s6g")
+lifetime = 0.5
+speed_scale = 2.3
+process_material = SubResource("ParticleProcessMaterial_x6y2n")
+
+[node name="humo" type="GPUParticles2D" parent="." unique_id=617825251]
+amount = 10
+texture = ExtResource("2_x20bc")
+lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_46ci4")

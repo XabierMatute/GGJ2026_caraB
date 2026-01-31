@@ -48,6 +48,8 @@ size = Vector2(647.07324, 212.97375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qf680"]
 size = Vector2(58.125366, 115.740555)
+[ext_resource type="PackedScene" uid="uid://dpxjkr7q2rfvh" path="res://efectos/polvo_particles_2d.tscn" id="12_qbixs"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbixs"]
 size = Vector2(3481.4287, 20)
@@ -348,6 +350,7 @@ rotation = 1.5707964
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WWalls/LeftWall"]
 shape = SubResource("WorldBoundaryShape2D_7uqg8")
 
+<<<<<<< HEAD
 [node name="RightWall" type="StaticBody2D" parent="WWalls"]
 position = Vector2(6241, -2)
 rotation = -1.5707964
@@ -416,6 +419,13 @@ debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
 [connection signal="body_exited" from="Planta-1/Piso-1Izq/Area2D" to="Planta-1/Piso-1Izq" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-1/Piso-1Dch/Area2D" to="Planta-1/Piso-1Dch" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-1/Piso-1Dch/Area2D" to="Planta-1/Piso-1Dch" method="_on_area_2d_body_exited"]
+=======
+[node name="CPUParticles2D" parent="." unique_id=1457626441 instance=ExtResource("12_qbixs")]
+position = Vector2(-5946, 9257)
+emission_shape = 3
+emission_rect_extents = Vector2(1200, 600)
+
+>>>>>>> 3a63c9c25a8ffb69f226cd0f44eaa25509d1f569
 [connection signal="body_entered" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-2/Piso-2Mid/Area2D" to="Planta-2/Piso-2Mid" method="_on_area_2d_body_entered"]
