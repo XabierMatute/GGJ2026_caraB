@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://cjb3twx1xonj6"]
+[gd_scene load_steps=74 format=3 uid="uid://cjb3twx1xonj6"]
 
 [ext_resource type="Texture2D" uid="uid://ch17t85uq2bcw" path="res://fondos/Piso2_descansoizq.png" id="1_3vdql"]
 [ext_resource type="Texture2D" uid="uid://c0jscr227vgc3" path="res://placeholders/esqueleto2.png" id="1_6f5qh"]
@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://0bb2josuafgu" path="res://animation/TIMI/TIMI - prota/mascara -1/timi izq mover 1 M-1.png" id="30_pxh82"]
 [ext_resource type="Script" uid="uid://c4q3jjwkacifh" path="res://escenas/piso+2_dch.gd" id="30_slkbj"]
 [ext_resource type="Texture2D" uid="uid://rynw2v034xbg" path="res://animation/TIMI/TIMI - prota/mascara -1/timi izq mover 2 M-1.png" id="31_gcye5"]
-[ext_resource type="Texture2D" uid="uid://do6om2w5cedul" path="res://placeholders/nubes2.png" id="31_slkbj"]
 [ext_resource type="Texture2D" uid="uid://c4wwh2yglbyo6" path="res://animation/TIMI/TIMI - prota/mascara -1/timi drch mover 1 M-1.png" id="32_hoa52"]
 [ext_resource type="Texture2D" uid="uid://bjydn0hxtcgn0" path="res://animation/TIMI/TIMI - prota/mascara -1/timi drch mover 2 M-1.png" id="33_1bjpk"]
 
@@ -270,6 +269,22 @@ animations = [{
 }]
 
 [node name="Edificio" type="Node2D"]
+
+[node name="Sky" type="ColorRect" parent="."]
+z_index = -10
+offset_left = -46204.0
+offset_top = -22343.0
+offset_right = 60245.0
+offset_bottom = 11086.0
+color = Color(0.52610093, 1, 1, 1)
+
+[node name="Tierra" type="ColorRect" parent="."]
+z_index = -10
+offset_left = -46258.0
+offset_top = 10638.0
+offset_right = 60191.0
+offset_bottom = 44067.0
+color = Color(0.15936455, 0, 0.03786373, 1)
 
 [node name="Planta+2" type="Node2D" parent="."]
 position = Vector2(0, -7400)
@@ -554,16 +569,6 @@ rotation = -1.5707964
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WWalls/RightWall"]
 shape = SubResource("WorldBoundaryShape2D_xe4al")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
-z_index = -1
-scroll_offset = Vector2(0, 1913)
-repeat_size = Vector2(14401, 0)
-autoscroll = Vector2(1500, 0)
-repeat_times = 3
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
-texture = ExtResource("31_slkbj")
-
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 10
 position = Vector2(-787, 2640)
@@ -600,22 +605,6 @@ offset_right = 92.0
 offset_bottom = 44.0
 scale = Vector2(14.880004, 12)
 text = "Down"
-
-[node name="Sky" type="ColorRect" parent="."]
-z_index = -10
-offset_left = -46204.0
-offset_top = -22343.0
-offset_right = 60245.0
-offset_bottom = 11086.0
-color = Color(0.52610093, 1, 1, 1)
-
-[node name="Tierra" type="ColorRect" parent="."]
-z_index = -10
-offset_left = -46258.0
-offset_top = 10638.0
-offset_right = 60191.0
-offset_bottom = 44067.0
-color = Color(0.15936455, 0, 0.03786373, 1)
 
 [connection signal="body_entered" from="Planta+2/Piso2Izq/Area2D" to="Planta+2/Piso2Izq" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta+2/Piso2Izq/Area2D" to="Planta+2/Piso2Izq" method="_on_area_2d_body_exited"]
