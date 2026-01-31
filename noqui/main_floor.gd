@@ -28,3 +28,26 @@ func _on_player_elevator_up() -> void:
 
 	
 	
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	var tween: Tween = create_tween()
+	
+	if body.name == "Player":
+		tween.tween_property($Camera2D, "position", $Sprite2D.position, 1)
+		tween.parallel().tween_property($Sprite2D, "modulate", Color.WHITE, 1)
+		
+
+
+func _on_area_2d_body_entered_0(body: Node2D) -> void:
+	var tween: Tween = create_tween()
+	
+	if body.name == "Player":
+		tween.tween_property($Camera2D, "position", $PlantaS.position, 1)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	var tween: Tween = create_tween()
+	
+	if body.name == "Player":
+		tween.parallel().tween_property($Sprite2D, "modulate", Color(616161), 1)
