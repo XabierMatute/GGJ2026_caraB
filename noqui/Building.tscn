@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://wumqnstuuudn"]
+
+[ext_resource type="Texture2D" uid="uid://d2i00skhs7iu6" path="res://diegotolosa_torre.png" id="1_e37n3"]
+[ext_resource type="Texture2D" uid="uid://ccjwwxw8qxlwe" path="res://trans.png" id="2_v8dyh"]
+
+[node name="Building" type="Node2D"]
+
+[node name="BuildingSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_e37n3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(142, 320)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.23, 0.23, 0.23, 0)
+position = Vector2(-229, -201)
+scale = Vector2(0.120000854, 1)
+texture = ExtResource("2_v8dyh")

@@ -46,6 +46,8 @@ texture = ExtResource("2_ip52o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_f0pd8")
 
+[node name="CA" type="Sprite2D" parent="Player"]
+
 [node name="walls2" type="StaticBody2D" parent="."]
 position = Vector2(551, -1)
 rotation = -1.5842758
