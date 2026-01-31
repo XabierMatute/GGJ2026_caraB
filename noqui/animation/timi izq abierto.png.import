@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bji86iewqy6g5"
-path="res://.godot/imported/esqueleto edificio.png-df6c6b54ff724df5eac3ab14323f5d9d.ctex"
+uid="uid://dmr5vidp46281"
+path="res://.godot/imported/timi izq abierto.png-cf0b7ee673a050ec50e76025ae549ecd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholders/esqueleto edificio.png"
-dest_files=["res://.godot/imported/esqueleto edificio.png-df6c6b54ff724df5eac3ab14323f5d9d.ctex"]
+source_file="res://animation/timi izq abierto.png"
+dest_files=["res://.godot/imported/timi izq abierto.png-cf0b7ee673a050ec50e76025ae549ecd.ctex"]
 
 [params]
 

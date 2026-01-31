@@ -1,16 +1,42 @@
-[gd_scene format=3 uid="uid://cjb3twx1xonj6"]
+[gd_scene load_steps=43 format=3 uid="uid://cjb3twx1xonj6"]
 
 [ext_resource type="Texture2D" uid="uid://c0jscr227vgc3" path="res://placeholders/esqueleto2.png" id="1_6f5qh"]
-[ext_resource type="Script" uid="uid://dt6euqqciidt4" path="res://escenas/edificio.gd" id="1_d3wf5"]
+[ext_resource type="Texture2D" uid="uid://byclf3uapkkr4" path="res://placeholders/piso-1dch.png" id="1_6peaj"]
 [ext_resource type="Texture2D" uid="uid://e10la4ldax1a" path="res://placeholders/piso0lobby.png" id="2_d3wf5"]
+[ext_resource type="Script" uid="uid://bpcfqx4bamxbm" path="res://escenas/piso_1_dch.gd" id="2_wtghu"]
 [ext_resource type="Texture2D" uid="uid://bue3ib33hxcea" path="res://placeholders/piso-2izq.png" id="3_7uqg8"]
+[ext_resource type="Texture2D" uid="uid://dkwpvnctullh2" path="res://placeholders/piso-1izq.png" id="3_x5pb1"]
 [ext_resource type="Texture2D" uid="uid://bb4ab40h2jddv" path="res://placeholders/piso-2mid.png" id="4_jo1d5"]
+[ext_resource type="Script" uid="uid://cuhrqaw3uux5" path="res://escenas/piso_1_izq.gd" id="4_w48w7"]
 [ext_resource type="Script" uid="uid://cbmvcpkb15wal" path="res://escenas/piso_2_izq.gd" id="5_jo1d5"]
 [ext_resource type="Texture2D" uid="uid://ej75hfcadc3o" path="res://placeholders/piso-2dch.png" id="5_xe4al"]
 [ext_resource type="Script" uid="uid://cnbdtabyx7wlc" path="res://escenas/character_body_2d.gd" id="6_qbixs"]
 [ext_resource type="Texture2D" uid="uid://c0gmxbwguf7fj" path="res://sm.jpg" id="7_8hci1"]
 [ext_resource type="Script" uid="uid://cyvupjtyeasf6" path="res://escenas/piso_2_mid.gd" id="7_xe4al"]
 [ext_resource type="Script" uid="uid://cqsjgwhrgs1mv" path="res://escenas/piso_2_dch.gd" id="9_xe4al"]
+[ext_resource type="Texture2D" uid="uid://gq1a7k6y5e32" path="res://icon.svg" id="12_qbixs"]
+[ext_resource type="Texture2D" uid="uid://bcvl1nll8tqtm" path="res://animation/timi drch abierto.png" id="15_x5pb1"]
+[ext_resource type="Texture2D" uid="uid://dht3fqy72cowh" path="res://animation/timi drch cerrado.png" id="16_w48w7"]
+[ext_resource type="Texture2D" uid="uid://bapa5lfrbuova" path="res://animation/timi izq cerrado.png" id="18_lo312"]
+[ext_resource type="Script" uid="uid://vmsxu34a3kog" path="res://escenas/piso_0_lobby.gd" id="18_w48w7"]
+[ext_resource type="Texture2D" uid="uid://dmr5vidp46281" path="res://animation/timi izq abierto.png" id="19_q6dum"]
+[ext_resource type="Texture2D" uid="uid://cud7cqkryxinb" path="res://placeholders/piso1izq.png" id="21_f6721"]
+[ext_resource type="Texture2D" uid="uid://p1aaeh8yboj" path="res://placeholders/piso1dch.png" id="22_twkw8"]
+[ext_resource type="Texture2D" uid="uid://dhkbnr412fwv8" path="res://placeholders/piso2izq.png" id="23_1xgdp"]
+[ext_resource type="Texture2D" uid="uid://nktsyi2ly7sn" path="res://placeholders/piso2mid.png" id="24_w6teq"]
+[ext_resource type="Texture2D" uid="uid://bwn6huchwhpoj" path="res://placeholders/piso2dch.png" id="25_blvmb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qilyf"]
+size = Vector2(1046.792, 179.23828)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6dum"]
+size = Vector2(1580.1357, 133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo312"]
+size = Vector2(646.5043, 212.97375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qf680"]
+size = Vector2(58.125366, 115.740555)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbixs"]
 size = Vector2(3481.4287, 20)
@@ -19,34 +45,155 @@ size = Vector2(3481.4287, 20)
 size = Vector2(1014.1455, 10.073147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hebl"]
-size = Vector2(270.4626, 2618.4744)
+size = Vector2(258.35394, 2618.4744)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8hebl"]
-radius = 182.0
-height = 718.0
+radius = 153.0
+height = 776.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf680"]
+atlas = ExtResource("15_x5pb1")
+region = Rect2(1992, 0, 996, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo312"]
+atlas = ExtResource("16_w48w7")
+region = Rect2(1992, 0, 996, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qilyf"]
+atlas = ExtResource("18_lo312")
+region = Rect2(1992, 0, 996, 2268)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf5pg"]
+atlas = ExtResource("19_q6dum")
+region = Rect2(1992, 0, 996, 2268)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6dum"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf680")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo312")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qilyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf5pg")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo312")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf680")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6peaj"]
+size = Vector2(0.5753764, 4.6073027)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d3wf5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7uqg8"]
 
-[node name="Edificio" type="Node2D" unique_id=1968105265]
-script = ExtResource("1_d3wf5")
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xe4al"]
 
-[node name="Esqueleto" type="Sprite2D" parent="." unique_id=1741791085]
+[node name="Edificio" type="Node2D"]
+
+[node name="Esqueleto" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("1_6f5qh")
 metadata/_edit_lock_ = true
 
-[node name="Piso0Lobby" type="Sprite2D" parent="." unique_id=414445242]
-position = Vector2(-481, 491)
+[node name="Planta0" type="Node2D" parent="."]
+position = Vector2(0, 5402)
+
+[node name="Piso0Lobby" type="Sprite2D" parent="Planta0"]
+position = Vector2(-486.99997, 0)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_d3wf5")
+script = ExtResource("18_w48w7")
 
-[node name="Planta-2" type="Node2D" parent="." unique_id=1418071642]
+[node name="Area2D" type="Area2D" parent="Planta0/Piso0Lobby"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta0/Piso0Lobby/Area2D"]
+position = Vector2(8.570984, 2.1428566)
+scale = Vector2(18.257135, 11.6285715)
+shape = SubResource("RectangleShape2D_qilyf")
+
+[node name="Suelo" type="StaticBody2D" parent="Planta0"]
+position = Vector2(0, 814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta0/Suelo"]
+position = Vector2(60.50006, 17.5)
+scale = Vector2(10.319999, 1)
+shape = SubResource("RectangleShape2D_q6dum")
+debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
+
+[node name="Planta-1" type="Node2D" parent="."]
+position = Vector2(0, 7330)
+
+[node name="Piso-1Izq" type="Sprite2D" parent="Planta-1"]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(-3187, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_x5pb1")
+script = ExtResource("4_w48w7")
+
+[node name="Area2D" type="Area2D" parent="Planta-1/Piso-1Izq"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-1/Piso-1Izq/Area2D"]
+position = Vector2(-50.71338, -17.142855)
+scale = Vector2(17.571424, 9.799997)
+shape = SubResource("RectangleShape2D_lo312")
+
+[node name="Piso-1Dch" type="Sprite2D" parent="Planta-1"]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(3536, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_6peaj")
+script = ExtResource("2_wtghu")
+
+[node name="Area2D" type="Area2D" parent="Planta-1/Piso-1Dch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-1/Piso-1Dch/Area2D"]
+position = Vector2(79.64258, -8.571426)
+scale = Vector2(129.70729, 18.032938)
+shape = SubResource("RectangleShape2D_qf680")
+
+[node name="Suelo" type="StaticBody2D" parent="Planta-1"]
+position = Vector2(0, 814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-1/Suelo"]
+position = Vector2(60.50006, 17.5)
+scale = Vector2(10.319999, 1)
+shape = SubResource("RectangleShape2D_q6dum")
+debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
+
+[node name="Planta-2" type="Node2D" parent="."]
 position = Vector2(0, 9194)
 metadata/_edit_lock_ = true
 
-[node name="Piso-2Izq" type="Sprite2D" parent="Planta-2" unique_id=1225634731]
+[node name="Piso-2Izq" type="Sprite2D" parent="Planta-2"]
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(-5859, 0)
 scale = Vector2(0.7, 0.7)
@@ -54,14 +201,14 @@ texture = ExtResource("3_7uqg8")
 script = ExtResource("5_jo1d5")
 metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Izq" unique_id=1012102264]
+[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Izq"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Izq/Area2D" unique_id=1543429899]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Izq/Area2D"]
 position = Vector2(-143.57227, 4.2851563)
 scale = Vector2(0.9999998, 102.99999)
 shape = SubResource("RectangleShape2D_qbixs")
 
-[node name="Piso-2Mid" type="Sprite2D" parent="Planta-2" unique_id=1501992454]
+[node name="Piso-2Mid" type="Sprite2D" parent="Planta-2"]
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(-458.999, 0)
 scale = Vector2(0.7, 0.7)
@@ -69,14 +216,14 @@ texture = ExtResource("4_jo1d5")
 script = ExtResource("7_xe4al")
 metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Mid" unique_id=72471272]
+[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Mid"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Mid/Area2D" unique_id=1279645353]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Mid/Area2D"]
 position = Vector2(-38.57251, -10.712891)
 scale = Vector2(11.001519, 203.22772)
 shape = SubResource("RectangleShape2D_8hci1")
 
-[node name="Piso-2Dch" type="Sprite2D" parent="Planta-2" unique_id=354775452]
+[node name="Piso-2Dch" type="Sprite2D" parent="Planta-2"]
 modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
 position = Vector2(4945, 0)
 scale = Vector2(0.7, 0.7)
@@ -84,45 +231,142 @@ texture = ExtResource("5_xe4al")
 script = ExtResource("9_xe4al")
 metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Dch" unique_id=1971808633]
+[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Dch"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Dch/Area2D" unique_id=2022690772]
-position = Vector2(14.285645, -25)
-scale = Vector2(13.331656, 0.7479819)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Dch/Area2D"]
+position = Vector2(95, -25)
+scale = Vector2(13.331655, 0.7479819)
 shape = SubResource("RectangleShape2D_8hebl")
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=1196018558]
-position = Vector2(-5031, 9559)
+[node name="Player" type="CharacterBody2D" parent="."]
+z_index = 1
+position = Vector2(-4049, 7223)
 script = ExtResource("6_qbixs")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1153900630]
+[node name="Sprite2D(placeholder)" type="Sprite2D" parent="Player"]
+visible = false
 position = Vector2(-27.999565, -12.000262)
 scale = Vector2(0.75463885, 0.9153853)
 texture = ExtResource("7_8hci1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=280161505]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-27, -11)
 shape = SubResource("CapsuleShape2D_8hebl")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1237873778]
-position = Vector2(-5729, 9068)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(-1.9073486e-06, -81.000015)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_q6dum")
+animation = &"walk_right"
+autoplay = "default"
 
-[node name="Floor" type="StaticBody2D" parent="." unique_id=1076243907]
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(-3651, 9911)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+scale = Vector2(191.17918, 26.4797)
+shape = SubResource("RectangleShape2D_6peaj")
+debug_color = Color(0.78245574, 0.28530976, 0.8222769, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("12_qbixs")
+
+[node name="WWalls" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="WWalls"]
 position = Vector2(0, 9950)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1132869383]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWalls/Floor"]
 shape = SubResource("WorldBoundaryShape2D_d3wf5")
 
-[node name="LeftWall" type="StaticBody2D" parent="." unique_id=788525877]
+[node name="LeftWall" type="StaticBody2D" parent="WWalls"]
 position = Vector2(-7240, -4)
 rotation = 1.5707964
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=818400774]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWalls/LeftWall"]
 shape = SubResource("WorldBoundaryShape2D_7uqg8")
 
+[node name="RightWall" type="StaticBody2D" parent="WWalls"]
+position = Vector2(6241, -2)
+rotation = -1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WWalls/RightWall"]
+shape = SubResource("WorldBoundaryShape2D_xe4al")
+
+[node name="Planta+1" type="Node2D" parent="."]
+
+[node name="Piso1Izq" type="Sprite2D" parent="Planta+1"]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(-4527, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("21_f6721")
+script = ExtResource("4_w48w7")
+
+[node name="Area2D" type="Area2D" parent="Planta+1/Piso1Izq"]
+position = Vector2(-105.71428, 7.1428566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Piso1Izq/Area2D"]
+position = Vector2(79.64258, -8.571426)
+scale = Vector2(129.70729, 18.032938)
+shape = SubResource("RectangleShape2D_qf680")
+
+[node name="Piso1Dch" type="Sprite2D" parent="Planta+1"]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(2180.0002, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("22_twkw8")
+script = ExtResource("2_wtghu")
+
+[node name="Area2D" type="Area2D" parent="Planta+1/Piso1Dch"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Piso1Dch/Area2D"]
+position = Vector2(48.571533, -17.142853)
+scale = Vector2(17.571424, 9.799997)
+shape = SubResource("RectangleShape2D_lo312")
+
+[node name="Suelo" type="StaticBody2D" parent="Planta+1"]
+position = Vector2(0, 814)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta+1/Suelo"]
+position = Vector2(60.50006, 17.5)
+scale = Vector2(10.319999, 1)
+shape = SubResource("RectangleShape2D_q6dum")
+debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
+
+[node name="Planta+2" type="Node2D" parent="."]
+position = Vector2(0, -7400)
+
+[node name="Piso2Izq" type="Sprite2D" parent="Planta+2"]
+position = Vector2(-5870, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("23_1xgdp")
+
+[node name="Piso2Mid" type="Sprite2D" parent="Planta+2"]
+position = Vector2(-465.0039, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("24_w6teq")
+
+[node name="Piso2Dch" type="Sprite2D" parent="Planta+2"]
+position = Vector2(4926, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("25_blvmb")
+
+[connection signal="body_entered" from="Planta0/Piso0Lobby/Area2D" to="Planta0/Piso0Lobby" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta0/Piso0Lobby/Area2D" to="Planta0/Piso0Lobby" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta-1/Piso-1Izq/Area2D" to="Planta-1/Piso-1Izq" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta-1/Piso-1Izq/Area2D" to="Planta-1/Piso-1Izq" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta-1/Piso-1Dch/Area2D" to="Planta-1/Piso-1Dch" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta-1/Piso-1Dch/Area2D" to="Planta-1/Piso-1Dch" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-2/Piso-2Mid/Area2D" to="Planta-2/Piso-2Mid" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-2/Piso-2Mid/Area2D" to="Planta-2/Piso-2Mid" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Planta-2/Piso-2Dch/Area2D" to="Planta-2/Piso-2Dch" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta-2/Piso-2Dch/Area2D" to="Planta-2/Piso-2Dch" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta+1/Piso1Izq/Area2D" to="Planta+1/Piso1Izq" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+1/Piso1Izq/Area2D" to="Planta+1/Piso1Izq" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta+1/Piso1Dch/Area2D" to="Planta+1/Piso1Dch" method="_on_area_2d_body_exited"]
