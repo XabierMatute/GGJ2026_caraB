@@ -15,8 +15,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="noqui"
+run/main_scene="uid://cjb3twx1xonj6"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=3000
+window/size/viewport_height=2000
 
 [rendering]
 

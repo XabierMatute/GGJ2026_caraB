@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://cjb3twx1xonj6"]
+
+[ext_resource type="Texture2D" uid="uid://c0jscr227vgc3" path="res://placeholders/esqueleto2.png" id="1_6f5qh"]
+[ext_resource type="Script" uid="uid://dt6euqqciidt4" path="res://escenas/edificio.gd" id="1_d3wf5"]
+[ext_resource type="Texture2D" uid="uid://e10la4ldax1a" path="res://placeholders/piso0lobby.png" id="2_d3wf5"]
+[ext_resource type="Texture2D" uid="uid://bue3ib33hxcea" path="res://placeholders/piso-2izq.png" id="3_7uqg8"]
+[ext_resource type="Texture2D" uid="uid://bb4ab40h2jddv" path="res://placeholders/piso-2mid.png" id="4_jo1d5"]
+[ext_resource type="Script" uid="uid://cbmvcpkb15wal" path="res://escenas/piso_2_izq.gd" id="5_jo1d5"]
+[ext_resource type="Texture2D" uid="uid://ej75hfcadc3o" path="res://placeholders/piso-2dch.png" id="5_xe4al"]
+[ext_resource type="Script" uid="uid://cnbdtabyx7wlc" path="res://escenas/character_body_2d.gd" id="6_qbixs"]
+[ext_resource type="Texture2D" uid="uid://c0gmxbwguf7fj" path="res://sm.jpg" id="7_8hci1"]
+[ext_resource type="Script" uid="uid://cyvupjtyeasf6" path="res://escenas/piso_2_mid.gd" id="7_xe4al"]
+[ext_resource type="Script" uid="uid://cqsjgwhrgs1mv" path="res://escenas/piso_2_dch.gd" id="9_xe4al"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbixs"]
+size = Vector2(3481.4287, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hci1"]
+size = Vector2(1014.1455, 10.073147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hebl"]
+size = Vector2(270.4626, 2618.4744)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8hebl"]
+radius = 182.0
+height = 718.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d3wf5"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7uqg8"]
+
+[node name="Edificio" type="Node2D" unique_id=1968105265]
+script = ExtResource("1_d3wf5")
+
+[node name="Esqueleto" type="Sprite2D" parent="." unique_id=1741791085]
+scale = Vector2(2, 2)
+texture = ExtResource("1_6f5qh")
+metadata/_edit_lock_ = true
+
+[node name="Piso0Lobby" type="Sprite2D" parent="." unique_id=414445242]
+position = Vector2(-481, 491)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_d3wf5")
+
+[node name="Planta-2" type="Node2D" parent="." unique_id=1418071642]
+position = Vector2(0, 9194)
+metadata/_edit_lock_ = true
+
+[node name="Piso-2Izq" type="Sprite2D" parent="Planta-2" unique_id=1225634731]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(-5859, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_7uqg8")
+script = ExtResource("5_jo1d5")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Izq" unique_id=1012102264]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Izq/Area2D" unique_id=1543429899]
+position = Vector2(-143.57227, 4.2851563)
+scale = Vector2(0.9999998, 102.99999)
+shape = SubResource("RectangleShape2D_qbixs")
+
+[node name="Piso-2Mid" type="Sprite2D" parent="Planta-2" unique_id=1501992454]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(-458.999, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_jo1d5")
+script = ExtResource("7_xe4al")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Mid" unique_id=72471272]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Mid/Area2D" unique_id=1279645353]
+position = Vector2(-38.57251, -10.712891)
+scale = Vector2(11.001519, 203.22772)
+shape = SubResource("RectangleShape2D_8hci1")
+
+[node name="Piso-2Dch" type="Sprite2D" parent="Planta-2" unique_id=354775452]
+modulate = Color(0.38039216, 0.38039216, 0.38039216, 1)
+position = Vector2(4945, 0)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_xe4al")
+script = ExtResource("9_xe4al")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Planta-2/Piso-2Dch" unique_id=1971808633]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta-2/Piso-2Dch/Area2D" unique_id=2022690772]
+position = Vector2(14.285645, -25)
+scale = Vector2(13.331656, 0.7479819)
+shape = SubResource("RectangleShape2D_8hebl")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1196018558]
+position = Vector2(-5031, 9559)
+script = ExtResource("6_qbixs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1153900630]
+position = Vector2(-27.999565, -12.000262)
+scale = Vector2(0.75463885, 0.9153853)
+texture = ExtResource("7_8hci1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=280161505]
+position = Vector2(-27, -11)
+shape = SubResource("CapsuleShape2D_8hebl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1237873778]
+position = Vector2(-5729, 9068)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1076243907]
+position = Vector2(0, 9950)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1132869383]
+shape = SubResource("WorldBoundaryShape2D_d3wf5")
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=788525877]
+position = Vector2(-7240, -4)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=818400774]
+shape = SubResource("WorldBoundaryShape2D_7uqg8")
+
+[connection signal="body_entered" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta-2/Piso-2Izq/Area2D" to="Planta-2/Piso-2Izq" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta-2/Piso-2Mid/Area2D" to="Planta-2/Piso-2Mid" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta-2/Piso-2Mid/Area2D" to="Planta-2/Piso-2Mid" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Planta-2/Piso-2Dch/Area2D" to="Planta-2/Piso-2Dch" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Planta-2/Piso-2Dch/Area2D" to="Planta-2/Piso-2Dch" method="_on_area_2d_body_exited"]
