@@ -395,7 +395,7 @@ shape = SubResource("RectangleShape2D_q6dum")
 debug_color = Color(0.80292046, 0.41394883, 0.1724791, 0.41960785)
 
 [node name="Planta1" type="Node2D" parent="."]
-position = Vector2(-960, -2417)
+position = Vector2(0, 5402)
 
 [node name="Piso0Lobby" type="Sprite2D" parent="Planta1"]
 position = Vector2(-486.99997, 0)
@@ -600,6 +600,22 @@ offset_right = 92.0
 offset_bottom = 44.0
 scale = Vector2(14.880004, 12)
 text = "Down"
+
+[node name="Sky" type="ColorRect" parent="."]
+z_index = -10
+offset_left = -46204.0
+offset_top = -22343.0
+offset_right = 60245.0
+offset_bottom = 11086.0
+color = Color(0.52610093, 1, 1, 1)
+
+[node name="Tierra" type="ColorRect" parent="."]
+z_index = -10
+offset_left = -46258.0
+offset_top = 10638.0
+offset_right = 60191.0
+offset_bottom = 44067.0
+color = Color(0.15936455, 0, 0.03786373, 1)
 
 [connection signal="body_entered" from="Planta+2/Piso2Izq/Area2D" to="Planta+2/Piso2Izq" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Planta+2/Piso2Izq/Area2D" to="Planta+2/Piso2Izq" method="_on_area_2d_body_exited"]
