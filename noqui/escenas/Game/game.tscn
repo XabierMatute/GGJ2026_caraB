@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://crv3fbhw0qbg0"]
+
+[ext_resource type="PackedScene" uid="uid://cjb3twx1xonj6" path="res://escenas/Edificio.tscn" id="1_i2cje"]
+[ext_resource type="Texture2D" uid="uid://m8qmf8i5ah8l" path="res://diseño máscaras.jpg" id="2_n6gyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iajpx"]
+atlas = ExtResource("2_n6gyx")
+
+[node name="Game" type="Node"]
+
+[node name="Edificio" parent="." instance=ExtResource("1_i2cje")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(1, 0)
+texture = SubResource("AtlasTexture_iajpx")

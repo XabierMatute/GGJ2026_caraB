@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmwvialipta3o"]
+[gd_scene load_steps=8 format=3 uid="uid://bmwvialipta3o"]
 
 [ext_resource type="Texture2D" uid="uid://cbg4pdsf4jkvu" path="res://animation/Secundarios-20260131T212745Z-3-001/Secundarios/Jason_movimiento_izq_1.png" id="1_2f31g"]
 [ext_resource type="Script" uid="uid://ii30r2j2me17" path="res://escenas/Personajes/character.gd" id="1_07wtj"]
@@ -26,10 +26,30 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_07wtj"]
+radius = 1365.952
+
 [node name="Jason" type="Node2D"]
 script = ExtResource("1_07wtj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gv82t")
 autoplay = "default"
-frame_progress = 0.49804112
+frame_progress = 0.29590163
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_07wtj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.999998
+offset_top = -1101.9999
+offset_right = 27.000002
+offset_bottom = -1052.9999
+scale = Vector2(25.200003, 23.96)
+text = "HOLA
+"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

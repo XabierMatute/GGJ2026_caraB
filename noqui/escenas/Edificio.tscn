@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=3 uid="uid://cjb3twx1xonj6"]
+[gd_scene load_steps=129 format=3 uid="uid://cjb3twx1xonj6"]
 
 [ext_resource type="Texture2D" uid="uid://ch17t85uq2bcw" path="res://fondos/Piso2_descansoizq.png" id="1_3vdql"]
 [ext_resource type="Texture2D" uid="uid://c0jscr227vgc3" path="res://placeholders/esqueleto2.png" id="1_6f5qh"]
@@ -70,7 +70,6 @@
 [ext_resource type="Texture2D" uid="uid://do2uctb7cmlev" path="res://animation/TIMI/TIMI - prota/mascara 1/Timi drch movimiento 2 M1.png" id="59_myvpr"]
 [ext_resource type="Texture2D" uid="uid://dt46angh5iovk" path="res://animation/TIMI/TIMI - prota/mascara 2/Timi movimiento drch 1 M2.png" id="60_6ypyr"]
 [ext_resource type="Texture2D" uid="uid://onj3ahgvyoms" path="res://animation/TIMI/TIMI - prota/mascara 2/Timi movimiento drch 2 M2.png" id="61_26odl"]
-[ext_resource type="PackedScene" uid="uid://bm1m4ntewyyy8" path="res://escenas/Personajes/Jimmi.tscn" id="71_myvpr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blvmb"]
 size = Vector2(137.6434, 168.93439)
@@ -633,11 +632,6 @@ position = Vector2(-486.99997, 0)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("11_3vdql")
 script = ExtResource("18_w48w7")
-
-[node name="Jimmi" parent="Planta0/Piso0Lobby" node_paths=PackedStringArray("player") instance=ExtResource("71_myvpr")]
-z_index = -1
-position = Vector2(12.142857, 6.428571)
-player = NodePath("../../../Player")
 
 [node name="Area2D" type="Area2D" parent="Planta0/Piso0Lobby"]
 
